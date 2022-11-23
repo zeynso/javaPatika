@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Palindrom {
+    public static void main(String[] args) {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.print("Bir say� giriniz: ");
+        int sayi = keyboard.nextInt();
+        isPalindrom(sayi);
+    }
+
+    public static boolean isPalindrom(int sayi){
+        int temp = sayi;
+        int tersi = 0;
+        while(temp > 0){
+            tersi = tersi * 10 + temp % 10;
+            temp /= 10;
+        }
+        if(sayi == tersi){
+            System.out.println(sayi +" bir palindrom say�d�r");
+            return true;
+        }else{
+            System.out.println(sayi+ "bir palindrom say� de�ildir");
+            return false;
+        }
+    }
+}
