@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class GradePointAverage {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double toplam=0;
+		int matematik , fizik , kimya , t�rk�e , tarih , m�zik;
+		Scanner keyboard = new Scanner(System.in);
+		System.out.println("Matematik notunuz:");
+		matematik = keyboard.nextInt();
+		if(matematik>0&&matematik<=100)
+			toplam+=matematik;
+		System.out.println("Fizik notunuz:");
+		fizik = keyboard.nextInt();
+		if(fizik>0&&fizik<=100)
+			toplam+=fizik;
+		System.out.println("Kimya notunuz:");
+		kimya = keyboard.nextInt();
+		if(kimya>0&&kimya<=100)
+			toplam+=kimya;
+		System.out.println("T�rk�e notunuz:");
+		t�rk�e = keyboard.nextInt();
+		if(t�rk�e>0&&t�rk�e<=100)
+			toplam+=t�rk�e;
+		System.out.println("Tarih notunuz:");
+		tarih = keyboard.nextInt();
+		if(tarih>0&&tarih<=100)
+			toplam+=tarih;
+		System.out.println("M�zik notunuz:");
+		m�zik = keyboard.nextInt();
+		if(m�zik>0&&m�zik<=100)
+			toplam+=m�zik;
+		double ortalama =toplam / 6;
+		System.out.println("Ortalaman�z: " + ortalama);
+		double b;
+		b= (ortalama >=55) ? 1 : 0;
+		System.out.println(b==1 ? "s�n�f� ge�ti" : "s�n�fta kald�");
+		}
+
+}
